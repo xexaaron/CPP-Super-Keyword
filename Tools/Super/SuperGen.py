@@ -72,7 +72,7 @@ with open("extracted_data.yaml", "w") as yaml_file:
 with open("extracted_data.yaml", "r") as yaml_file:
     yaml_data = yaml.safe_load(yaml_file)
 
-# convert yaml output json because yaml looked ugly
+# convert yaml output to json because yaml looked ugly
 
 json_data = json.dumps(yaml_data, indent=2)
 
