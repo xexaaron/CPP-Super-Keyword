@@ -65,7 +65,5 @@
     the changes made by SuperImpl.py.
     
   * SuperDestruct.py logs all instances of replacement inside a file called reverse_change_log.txt
-    located in the same directory as this script (Root/Tools/Super).
-    
-
+  * located in the same directory as this script (Root/Tools/Super).
     
