@@ -1,0 +1,4 @@
+2023-11-20 18:59:36: Replaced 'exampleParent' with 'Super' in D:\GithubRepositories\Super\src\example\exampleChild.hpp
+------------------------------------------------------------------------------------------
+2023-11-20 18:59:36: Replaced 'exampleChild' with 'Super' in D:\GithubRepositories\Super\src\example\exampleGrandChild.hpp
+------------------------------------------------------------------------------------------

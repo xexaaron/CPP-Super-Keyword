@@ -1,0 +1,10 @@
+{
+  "D:\\GithubRepositories\\Super\\src\\example\\exampleChild.hpp": {
+    "child": "exampleChild",
+    "parent": "exampleParent"
+  },
+  "D:\\GithubRepositories\\Super\\src\\example\\exampleGrandChild.hpp": {
+    "child": "exampleGrandChild",
+    "parent": "exampleChild"
+  }
+}

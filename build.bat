@@ -30,6 +30,12 @@ REM Determine post-build state
 if %errorlevel% equ 0 (
     echo.
     echo Build successful
+    if exist "%toolsDir%\Super" (
+    pushd "%toolsDir%\Super" && (       
+        python SuperLog.py
+        popd
+    )
+)
     move "%projDir%\build\Release\%projName%.exe" "%projDir%"
 ) else (
     echo Build failed!
