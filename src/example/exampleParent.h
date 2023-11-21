@@ -11,7 +11,6 @@ public:
     ~exampleParent();
 private:
 protected:
-    using Super = exampleParent;
     virtual void TestExample();
     std::string GetClassName();  
 };
