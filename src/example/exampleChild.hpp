@@ -3,6 +3,8 @@
 
 class exampleChild : public exampleParent {
 public:
+
+
     exampleChild() = default;
     ~exampleChild() = default;
     void TestExample() override {

@@ -1,6 +1,8 @@
 #include "exampleParent.h"
 
-exampleParent::exampleParent() = default;
+exampleParent::exampleParent() {
+    
+}
 exampleParent::~exampleParent() = default;
 
 void exampleParent::TestExample() {

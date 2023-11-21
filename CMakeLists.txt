@@ -9,12 +9,13 @@ project(${projName})
 
 
 #VARIABLES
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(SOURCE_FILES main.cpp 
 				src/example/exampleParent.cpp
 				src/example/exampleChild.hpp
-				src/example/exampleGrandChild.hpp) 
+				src/example/exampleGrandChild.hpp)
 
 
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+target_compile_definitions(${PROJECT_NAME} PRIVATE Super=Class)
