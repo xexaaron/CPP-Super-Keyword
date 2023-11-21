@@ -57,9 +57,9 @@ for file_path in found_files:
             elif f"Super" in line:
                 matching_lines[line_number] = line.lstrip() 
 
-    # Create yaml data using the filepath of each file as the object
-    # Add the parent and child information extracted from the above function
-    # to its corresponding filepath object. 
+    # Create yaml data using the filepath of each file as the object.
+    # Add the parent information to the corresponding 
+    # filepath object as well as the child class name.
 
     if matching_word and matching_lines:
         data[file_path] = {
