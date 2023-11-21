@@ -17,7 +17,6 @@ if [ -d "$toolsDir/Super" ]; then
     python SuperGen.py
     python SuperImpl.py
   )
-
 fi
 
 # Export variables to be used in CMakeLists.txt Configuration
