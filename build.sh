@@ -24,7 +24,7 @@ export CMProjName=$projName
 export RsrcDir=$rsrcDir
 export ToolsDir=$ToolsDir
 
-cmake -S . -B build -G "Visual Studio 17 2022" -A x64 
+cmake -S . -B build -G "Unix Makefiles"
 cmake --build build --config Release
 
 # Determine post-build state
