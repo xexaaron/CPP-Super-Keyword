@@ -6,6 +6,8 @@ import fnmatch
 import yaml
 import json
 
+SourceDirName="src"
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 def find_files(directory, extensions):
@@ -21,7 +23,7 @@ parent_dir = os.path.dirname(script_dir)
 
 #move up two directories and into the source directory into project src dir
 
-directory_to_search = os.path.join(os.path.dirname(parent_dir), "src")
+directory_to_search = os.path.join(os.path.dirname(parent_dir), SourceDirName)
 
 extensions_to_find = ['cpp', 'hpp']
 
