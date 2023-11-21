@@ -4,6 +4,10 @@ import json
 import datetime
 
 # Create a log file to record changes
+
+if os.path.exists('change_log.txt'):
+    os.remove('change_log.txt')
+
 log_file_path = 'change_log.txt'
 log = open(log_file_path, 'a')  # Open the log file in append mode
 
@@ -30,7 +34,7 @@ for file_path, details in data.items():
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = f"{timestamp}: Replaced 'Super' with '{details['parent']}' in {file_path}\n"
         log.write(log_entry)
-
+        log.write("-------------------------------------------------------------------------------------------\n")
 # Close the log file
 log.close()
 

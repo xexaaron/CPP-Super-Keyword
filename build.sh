@@ -31,6 +31,13 @@ cmake --build build --config Release
 if [ $? -eq 0 ]; then
     echo ""
     echo "Build successful"
+    if [ -d "$toolsDir/Super" ]; then
+      (
+      cd "$toolsDir/Super" || exit
+      python SuperLog.py
+      )
+    fi
+
     mv "$projDir"/build/Release/"$projName".exe "$projDir"
 else
     echo "Build failed!"
