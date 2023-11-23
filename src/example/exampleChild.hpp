@@ -1,4 +1,4 @@
-#include "exampleParent.h"
+#include "../../include/exampleParent.h"
 
 
 class exampleChild : public exampleParent {

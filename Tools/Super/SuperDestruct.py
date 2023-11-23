@@ -43,7 +43,7 @@ for file_path, details in data.items():
         with open(file_path, 'w') as file:
             file.write(replaced_content)
 
-      
+        Instances = replaced_content.count(f"{details['parent']}")
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = f"{timestamp}: Replaced '{details['parent']}' with 'Super' in {file_path}\n"
         log.write(log_entry)

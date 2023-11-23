@@ -1,7 +1,7 @@
 #include "exampleChild.hpp"
 
 
-class exampleGrandChild final : public exampleChild {
+class exampleGrandChild : public exampleChild {
 public:
     exampleGrandChild() = default;
     ~exampleGrandChild() = default;
