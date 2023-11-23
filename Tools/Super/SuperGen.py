@@ -1,4 +1,3 @@
-#!/usr/bin python
 # Script Directory :Tools/Super
 
 import os
@@ -6,7 +5,7 @@ import fnmatch
 import yaml
 import json
 
-SourceDirName="src"
+
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -23,14 +22,12 @@ parent_dir = os.path.dirname(script_dir)
 
 # move up two directories and into the source directory into project src dir
 
-directory_to_search = os.path.join(os.path.dirname(parent_dir), SourceDirName)
+directory_to_search = os.path.join(os.path.dirname(parent_dir))
 
-extensions_to_find = ['cpp', 'hpp']
+extensions_to_find = ['hpp', 'h', 'cpp']
 
 found_files = find_files(directory_to_search, extensions_to_find)
 
-matching_word = ""
-matching_lines = {}
 data = {}
 
 for file_path in found_files:
@@ -60,12 +57,13 @@ for file_path in found_files:
     # Create yaml data using the filepath of each file as the object.
     # Add the parent information to the corresponding 
     # filepath object as well as the child class name.
-
-    if matching_word and matching_lines:
+    
+    if matching_word:
         data[file_path] = {
             "parent": matching_word,
             "child": class_name
         }
+    
 with open("extracted_data.yaml", "w") as yaml_file:
     yaml.dump(data, yaml_file, default_flow_style=False)
 
@@ -84,6 +82,9 @@ try:
     os.remove("extracted_data.yaml")
 except FileNotFoundError:
     print("YAML file not found.")    
+
+
+
 
 
 
